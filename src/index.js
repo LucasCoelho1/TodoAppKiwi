@@ -1,98 +1,44 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import HomeScreen from "./screens/HomeScreen";
-import AddTaskScreen from "./screens/AddTaskScreen";
-import EditTaskScreen from "./screens/EditTaskScreen";
+import * as React from 'react';
+import { Drawer } from 'react-native-paper';
 
-const Stack = createNativeStackNavigator();
+const RootNavigation = () => {
 
-export default function RootNavigation() {
+  const [active, setActive] = React.useState('');
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="TabsNavigation"
-          component={TabsNavigation}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{
-            headerShown: true, 
-            headerStyle: {
-              backgroundColor: '#000',
-            },
-            headerTintColor: '#fff',
-          }}
-        />
-        <Stack.Screen
-          name="AddTaskScreen"
-          component={AddTaskScreen}
-          options={{
-            headerShown: true, 
-            headerStyle: {
-              backgroundColor: '#000',
-            },
-            headerTintColor: '#fff',
-          }}
-        />
-        <Stack.Screen
-          name="EditTaskScreen"
-          component={EditTaskScreen}
-          options={{
-            headerShown: true, 
-            headerStyle: {
-              backgroundColor: '#000',
-            },
-            headerTintColor: '#fff',
-          }}
-        />
-
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-const tabs = createMaterialBottomTabNavigator();
-
-function TabsNavigation() {
-  return (
-    <tabs.Navigator>
-      <tabs.Screen
-        name="HomeScreen"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: "HomeScreen",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home-outline" size={26} />
-          ),
-        }}
+    <Drawer.Section theme={{ colors: { primary: 'green' } }} title="Some title">
+      <Drawer.Item
+        label="First Item"
+        active={active === '1'}
+        onPress={() => setActive('1')}
       />
-      <tabs.Screen
-        name="AddTaskScreen"
-        component={AddTaskScreen}
-        options={{
-          tabBarLabel: "AddTaskScreen",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="gamepad-variant-outline" size={26} />
-          ),
-        }}
+      <Drawer.Item
+        label="Second Item"
+        active={active === '2'}
+        onPress={() => setActive('2')}
       />
-      <tabs.Screen
-        name="EditTaskScreen"
-        component={EditTaskScreen}
-        options={{
-          tabBarLabel: "EditTaskScreen",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="EditTaskpad-variant-outline" size={26} />
-          ),
-        }}
+      <Drawer.Item
+        label="Second Item"
+        active={active === '3'}
+        onPress={() => setActive('3')}
       />
-    </tabs.Navigator>
-  );
-}
+      <Drawer.Item
+        label="Second Item"
+        active={active === '4'}
+        onPress={() => setActive('4')}
+      />
+      <Drawer.Item
+        label="Second Item"
+        active={active === '5'}
+        onPress={() => setActive('5')}
+      />
+      <Drawer.Item
+        label="Second Item"
+        active={active === '6'}
+        onPress={() => setActive('6')}
+      />
+    </Drawer.Section>
+  )
+};
+
+export default RootNavigation;

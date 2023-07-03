@@ -11,7 +11,12 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "georgia"
   },
-
+  drawerSection: {
+    flex: 1,
+    alignItems: "center",
+    paddingLeft: 16,
+  },
+  
   center: {
     alignItems: "center",
     justifyContent: "center",
