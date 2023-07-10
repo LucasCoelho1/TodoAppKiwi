@@ -78,7 +78,10 @@ const tabs = createMaterialBottomTabNavigator();
 
 function TabsNavigation() {
   return (
-    <tabs.Navigator>
+    <tabs.Navigator
+      activeColor="#588266"
+      inactiveColor="black"
+      barStyle={{ backgroundColor: '#BFF5D0' }}>
       <tabs.Screen
         name="HomeScreen"
         component={HomeScreen}

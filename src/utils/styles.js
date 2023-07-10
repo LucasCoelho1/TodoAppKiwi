@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    fontFamily: "georgia"
+    fontFamily: "georgia",
+    backgroundColor: "#E0FFEA",
   },
   drawerSection: {
     flex: 1,

@@ -31,26 +31,29 @@ export default function AddTaskScreen() {
         >
             <Text
                 variant="headlineLarge"
-            >Adicionar Tarefa</Text>
+                style={{fontSize: 20, marginBottom: 7}}
+            >🥝 Adicionar Tarefa 🥝</Text>
             <Divider />
             <TextInput
                 label="Título"
                 value={titulo}
                 onChangeText={setTitulo}
-                style={styles.selfFullWidth}
+                style={{ backgroundColor:"#9CF5B6", color:"black", margin: 5}}
             />
             <Divider style={styles.divider} />
             <TextInput
                 label="Descrição"
                 value={descricao}
                 onChangeText={setDescricao}
-                style={styles.selfFullWidth}
+                style={{ backgroundColor:"#9CF5B6", color:"black", margin: 5}}
             />
             <Divider style={styles.divider} />
             <Button
                 mode="contained"
                 onPress={addTaskToFirestore}
                 icon={"plus"}
+                textColor="black"
+                style={{ backgroundColor:"#9CF5B6"}}
             >Adicionar Tarefa</Button>
         </View>
     )
