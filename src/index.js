@@ -20,51 +20,55 @@ export default function RootNavigation() {
             headerShown: false,
           }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
           options={{
-            headerShown: true, 
+            headerShown: true,
             headerStyle: {
-              backgroundColor: '#000',
+              backgroundColor: "#000",
             },
-            headerTintColor: '#fff',
+            headerTintColor: "#fff",
           }}
         />
         <Stack.Screen
           name="AddTaskScreen"
           component={AddTaskScreen}
           options={{
-            headerShown: true, 
+            headerShown: true,
             headerStyle: {
-              backgroundColor: '#000',
+              backgroundColor: "#000",
             },
-            headerTintColor: '#fff',
+            headerTintColor: "#fff",
+          }}
+        /> */}
+        <Stack.Screen
+          name="EditTaskScreen"
+          component={EditTaskScreen}
+          options={{
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "#000",
+            },
+            headerTintColor: "#fff",
+          }}
+        />
+        {/* <Stack.Screen
+          name="ListAllTasks"
+          component={ListAllTasks}
+          options={{
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "#000",
+            },
+            headerTintColor: "#fff",
           }}
         />
         <Stack.Screen
           name="EditTaskScreen"
           component={EditTaskScreen}
-          options={{
-            headerShown: true, 
-            headerStyle: {
-              backgroundColor: '#000',
-            },
-            headerTintColor: '#fff',
-          }}
-        />
-        <Stack.Screen
-          name="ListAllTasks"
-          component={ListAllTasks}
-          options={{
-            headerShown: true, 
-            headerStyle: {
-              backgroundColor: '#000',
-            },
-            headerTintColor: '#fff',
-          }}
-        />
-
+          options={{ headerShown: false }}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -95,23 +99,17 @@ function TabsNavigation() {
           ),
         }}
       />
-      <tabs.Screen
-        name="EditTaskScreen"
-        component={EditTaskScreen}
-        options={{
-          tabBarLabel: "EditTaskScreen",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="EditTaskpad-variant-outline" size={26} />
-          ),
-        }}
-      />
+
       <tabs.Screen
         name="ListAllTasks"
         component={ListAllTasks}
         options={{
           tabBarLabel: "ListAllTasks",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="EditTaskpad-variant-outline" size={26} />
+            <MaterialCommunityIcons
+              name="EditTaskpad-variant-outline"
+              size={26}
+            />
           ),
         }}
       />
