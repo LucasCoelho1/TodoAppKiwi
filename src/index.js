@@ -5,6 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
 import AddTaskScreen from "./screens/AddTaskScreen";
 import EditTaskScreen from "./screens/EditTaskScreen";
+import ListAllTasks from "./screens/ListAllTasks";
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,17 @@ export default function RootNavigation() {
             headerTintColor: '#fff',
           }}
         />
+        <Stack.Screen
+          name="ListAllTasks"
+          component={ListAllTasks}
+          options={{
+            headerShown: true, 
+            headerStyle: {
+              backgroundColor: '#000',
+            },
+            headerTintColor: '#fff',
+          }}
+        />
 
       </Stack.Navigator>
     </NavigationContainer>
@@ -88,6 +100,16 @@ function TabsNavigation() {
         component={EditTaskScreen}
         options={{
           tabBarLabel: "EditTaskScreen",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="EditTaskpad-variant-outline" size={26} />
+          ),
+        }}
+      />
+      <tabs.Screen
+        name="ListAllTasks"
+        component={ListAllTasks}
+        options={{
+          tabBarLabel: "ListAllTasks",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="EditTaskpad-variant-outline" size={26} />
           ),
