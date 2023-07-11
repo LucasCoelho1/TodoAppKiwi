@@ -101,12 +101,12 @@ export default function ListAllTasks({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.1 }}>
-        <Text variant="headlineLarge">Lista de Tarefas</Text>
+        <Text variant="headlineLarge" style={{fontSize: 23, marginTop: 25}}>Lista de Tarefas</Text>
       </View>
       <View
         style={{
-          ...styles.selfFullWidth,
           flex: 0.9,
+          ...styles.selfCenter,
         }}
       >
         <ScrollView

@@ -110,7 +110,7 @@ function TabsNavigation() {
           tabBarLabel: "ListAllTasks",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="EditTaskpad-variant-outline"
+              name="format-list-bulleted"
               size={26}
             />
           ),

@@ -5,7 +5,7 @@ import { Button } from 'react-native-paper';
 
 const HomeScreen = ({navigation}) => (
    <View style={styles.container}>
-      <Text style={{ fontSize: 20, marginBottom: 7}}>🥝 Bem vindo ao TodoAppKiwi 🥝</Text>
+      <Text style={{ fontSize: 20, marginBottom: 7}} variant="headlineLarge">🥝 Bem vindo ao TodoAppKiwi 🥝</Text>
       <View style={{ border: "1px solid #3F7550", paddingleft: "85%", paddingRight: "85%", marginBottom: 7}}></View>
       <Button
       mode='contained'
